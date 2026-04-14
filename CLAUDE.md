@@ -1,8 +1,8 @@
 # kustomize-synthesizer
 
-Typed Kustomize manifest generation from proven types. Built on yaml-synthesizer.
+Typed Kustomize manifest generation from proven types. Built on yaml-synthesizer. All output validated by tree-sitter-yaml.
 
-## Tests: 22 | Status: Proven
+## Tests: 27 | Status: Proven, tree-sitter Validated
 
 ## Core Types
 
@@ -12,12 +12,18 @@ Typed Kustomize manifest generation from proven types. Built on yaml-synthesizer
 | `Patch` | StrategicMerge / Json6902 / Inline |
 | `ConfigMapGenerator` | Name, literals, files, behavior |
 | `SecretGenerator` | Name, literals, type, behavior |
-| `ImageOverride` | Retag or rename container images |
+| `ImageOverride` | `retag(name, tag)` or `rename(name, new_name)` |
+
+No Raw variant exists. Struct-based, not enum-based.
 
 ## Rendering
 
 `render_kustomization(&Kustomization)` → kustomization.yaml as YamlNode
 
+## tree-sitter Validation
+
+5 tests validate kustomization output (basic, full, secrets, patches, labels) via `tree-sitter-yaml`.
+
 ## Dependencies
 
-yaml-synthesizer (path dep). proptest (dev).
+yaml-synthesizer (path). proptest, tree-sitter, tree-sitter-yaml (dev).
