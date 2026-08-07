@@ -164,7 +164,8 @@ impl Kustomization {
 
     #[must_use]
     pub fn label(mut self, key: &str, value: &str) -> Self {
-        self.common_labels.push((key.to_string(), value.to_string()));
+        self.common_labels
+            .push((key.to_string(), value.to_string()));
         self
     }
 

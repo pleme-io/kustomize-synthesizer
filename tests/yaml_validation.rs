@@ -39,8 +39,11 @@ fn full_kustomization_valid_yaml() {
 
 #[test]
 fn kustomization_with_secret_generator_valid() {
-    let k = Kustomization::new()
-        .secret(SecretGenerator::new("db-creds").opaque().literal("username", "admin"));
+    let k = Kustomization::new().secret(
+        SecretGenerator::new("db-creds")
+            .opaque()
+            .literal("username", "admin"),
+    );
     validate_yaml(&emit_file(&render_kustomization(&k)));
 }
 

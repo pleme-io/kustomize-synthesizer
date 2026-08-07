@@ -90,7 +90,11 @@ fn law_determinism_holds_on_patches_and_generators() {
                 .literal("LOG_LEVEL", "info")
                 .literal("PORT", "8080"),
         )
-        .secret(SecretGenerator::new("db-creds").opaque().literal("user", "admin"));
+        .secret(
+            SecretGenerator::new("db-creds")
+                .opaque()
+                .literal("user", "admin"),
+        );
     assert!(laws::is_deterministic(&k, 0));
     assert!(laws::is_deterministic(&k, 1));
 }

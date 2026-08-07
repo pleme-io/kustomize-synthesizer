@@ -51,10 +51,7 @@ pub fn render_kustomization(k: &Kustomization) -> YamlNode {
             .iter()
             .map(render_secret_generator)
             .collect();
-        entries.push(YamlEntry::new(
-            "secretGenerator",
-            YamlNode::Seq(gen_nodes),
-        ));
+        entries.push(YamlEntry::new("secretGenerator", YamlNode::Seq(gen_nodes)));
     }
 
     if !k.images.is_empty() {

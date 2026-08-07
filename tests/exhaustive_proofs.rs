@@ -168,11 +168,11 @@ fn realistic_fluxcd_overlay() {
         .namespace("observability")
         .resource("../../base")
         .patch(Patch::StrategicMerge("patch-resources.yaml".into()))
-        .config_map(
-            ConfigMapGenerator::new("vector-config")
-                .file("vector.yaml"),
-        )
-        .image(ImageOverride::retag("timberio/vector", "0.41.1-distroless-libc"))
+        .config_map(ConfigMapGenerator::new("vector-config").file("vector.yaml"))
+        .image(ImageOverride::retag(
+            "timberio/vector",
+            "0.41.1-distroless-libc",
+        ))
         .label("app.kubernetes.io/part-of", "shinryu")
         .annotation("fluxcd.io/automated", "true");
 
