@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "cargo_lock_sha256": "df1b656775ecb56985d4d771fe7d74260a4439df4241aef9f3c35cbdf599e62f",
+  "cargo_lock_sha256": "c254628f811ac9c596e446c22e87a2b668d2c56ab7a86cd38cca8c53acab9bc4",
   "manifest_sha256": {
-    "Cargo.toml": "3df359712220f0ca6472cca4eea3df7fc76704d2100e4cb717ac41148881b624"
+    "Cargo.toml": "76e9d0699d3e9db5a2d9cbe1ed9d72622067b94a00bc583b55c0d131cf0f5698"
   },
   "target_resolves": {
     "base": {
@@ -64,11 +64,11 @@
           "std"
         ]
       },
-      "cc-1.4.0": {
+      "cc-1.4.1": {
         "runtime_dependencies": [
           {
             "name": "find_msvc_tools",
-            "package_key": "find-msvc-tools-0.1.9",
+            "package_key": "find-msvc-tools-0.1.10",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -142,7 +142,7 @@
           "std"
         ]
       },
-      "find-msvc-tools-0.1.9": {
+      "find-msvc-tools-0.1.10": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
@@ -349,7 +349,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "kustomize-synthesizer-0.1.1": {
+      "kustomize-synthesizer-0.1.2": {
         "runtime_dependencies": [
           {
             "name": "synthesizer_core",
@@ -967,7 +967,7 @@
         "build_dependencies": [
           {
             "name": "cc",
-            "package_key": "cc-1.4.0",
+            "package_key": "cc-1.4.1",
             "kind": "build",
             "features": [],
             "uses_default_features": true,
@@ -1002,7 +1002,7 @@
         "build_dependencies": [
           {
             "name": "cc",
-            "package_key": "cc-1.4.0",
+            "package_key": "cc-1.4.1",
             "kind": "build",
             "features": [],
             "uses_default_features": true,
@@ -1699,8 +1699,8 @@
     "bitflags-2.13.1": {
       "edition": "2021"
     },
-    "cc-1.4.0": {
-      "edition": "2018"
+    "cc-1.4.1": {
+      "edition": "2021"
     },
     "cfg-if-1.0.4": {
       "edition": "2018"
@@ -1711,8 +1711,8 @@
     "fastrand-2.5.0": {
       "edition": "2018"
     },
-    "find-msvc-tools-0.1.9": {
-      "edition": "2018"
+    "find-msvc-tools-0.1.10": {
+      "edition": "2021"
     },
     "fnv-1.0.7": {
       "edition": "2015",
@@ -1729,7 +1729,7 @@
       "edition": "2024",
       "build_script": "build.rs"
     },
-    "kustomize-synthesizer-0.1.1": {
+    "kustomize-synthesizer-0.1.2": {
       "edition": "2024",
       "lib_target": {
         "name": "kustomize_synthesizer",
